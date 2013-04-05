@@ -1,0 +1,38 @@
+body {
+    background: #eee !important;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+h1 {
+    -webkit-text-shadow: 1px 2px #dadada;
+       -moz-text-shadow: 1px 2x #dadada;
+            text-shadow: 1px 2px #dadada;
+    margin-bottom: 20px;
+}
+
+.tlink {
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+a.tlink:hover {
+    text-decoration: none;
+}
+
+.forkme {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+.githubpage {
+    font-size: 20px;
+    color: #222222;
+}
+
+ul.heapshot {
+    margin-bottom: 140px;
+}

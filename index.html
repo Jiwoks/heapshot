@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heap Shot</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="css/heapshot.css">
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="jquery.imagesloaded.min.js" type="text/javascript"></script>
+    <script src="jQueryRotate.min.js" type="text/javascript"></script>
+    <script src="jquery.heapshot.js" type="text/javascript"></script>
+    <script type="text/javascript">
+          jQuery(document).ready(function($) {
+                $('.heapshot').heapshot({ 
+                    'rotation' : 80
+                });
+            });
+      </script>
+  </head>
+  <body>
+      <div class="container">
+        <h1>HeapShot jQuery plugin</h1>
+        <div class="row">
+            <div class="span8">
+                <ul class="heapshot">
+                    <li><img src="img/1.jpg" alt="" /></li>
+                    <li><img src="img/2.jpg" alt="" /></li>
+                    <li><img src="img/3.jpg" alt="" /></li>
+                    <li><img src="img/4.jpg" alt="" /></li>
+                    <li><img src="img/5.jpg" alt="" /></li>
+                    <li><img src="img/6.jpg" alt="" /></li>
+                </ul>
+                <h2>Quick start</h2>
+                <h3>Include css and javascript files</h3>
+                <script src="https://gist.github.com/Jiwoks/5322184.js"></script>
+                <h3>Insert images</h3>
+                <p>Insert images with unordered list</p>
+                <script src="https://gist.github.com/Jiwoks/5322198.js"></script>
+                <h3>Init HeapShot</h3>                
+                <script src="https://gist.github.com/Jiwoks/5322214.js"></script>
+                <h2>Advanced features</h2>
+                <h3>Script options</h3>
+                <p>You can init Heapshot with some options</p>
+                <script src="https://gist.github.com/Jiwoks/5322245.js"></script>
+                <ul>
+                    <li>indexStart is the z-index css property which is applied to the images, the count start from this option</li>
+                    <li>rotation is the angle applied during easing</li>
+                    <li>easing is an equation to calculate the easing (more functions here <a href="http://dzone.com/snippets/robert-penner-easing-equations">Easing equations</a></li>
+                    <li>overflowparents will set all the parents overflow to visible if set to true</li>
+                </ul>
+            </div>
+            <div class="span4">
+                <a class="tlink" href="https://twitter.com/cracdesign" target="_blank">
+                    <div class="well">
+                        <span class="pull-left"><img src="img/twitter.png" alt="twitter" /></span>
+                        <span class="tlink">Follow me on Twitter</span>
+                    </div>
+                </a>
+                <div class="well text-center">
+                    <h2>Downloads</h2>
+                    <p>
+                        <a class="btn btn-primary" href="https://github.com/Jiwoks/heapshot/archive/master.zip"><span class="icon-download"></span> Download as ZIP</a>
+                    </p>
+                    <p>
+                        <a class="btn btn-primary" href="https://github.com/Jiwoks/heapshot/archive/master.tar.gz"><span class="icon-download"></span> Download as TAR.GZ</a>
+                    </p>
+                    <p><a href="https://github.com/Jiwoks/heapshot" class="githubpage" target="_blank">Github page</a></p>
+                    <p>Heapshot is released under MIT Licence</p>
+                </div>
+                <div class="well text-center">
+                    <h3>Other projects</h3>
+                    <a href="http://sandbox.crac-design.com/jaofiletree" target="_blank">JaoFileTree</a> File tree plugin for jquery
+                </div>
+                <div class="well">
+                    <p>Photo credits under <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a> via <a href="http://photopin.com">photopin</a></p>
+                    <a href="http://www.flickr.com/photos/mcmortygreen/3176998867/">mcmortygreen</a>
+                    <a href="http://www.flickr.com/photos/bass_nroll/6436370499/">bass_nroll</a>
+                    <a href="http://www.flickr.com/photos/jclabarca/2561450428/">juan carlos labarca</a>
+                    <a href="http://www.flickr.com/photos/abirkill/6867047658/">Alexis Birkill</a>
+                    <a href="http://www.flickr.com/photos/hbaxter/4324079657/">hdeb89</a>
+                    <a href="http://www.flickr.com/photos/prinothphotography/5602934301/">prinothphotography</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="https://github.com/you"><img class="forkme" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+  </body>
+</html>
