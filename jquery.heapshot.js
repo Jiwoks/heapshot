@@ -26,10 +26,13 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         'indexStart'        : 100,
         'rotation'          : 80,
         'easing'            : function(x, t, b, c, d){return c*t/d + b;}, //See http://dzone.com/snippets/robert-penner-easing-equations
-        'overflowparents'   : true
+        'overflowparents'   : true,
+        'autostart'         : true,
+        'animationdelay'    : 1500
     };
 
     var _animate = false;
+    var _interval;
 
     var $heapshot;
 
@@ -79,7 +82,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     };
 
     next = function(){
-        
+        $heapshot.find('li img').trigger('click');
     };
 
     previous = function(){
@@ -97,6 +100,18 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 bindto = elem;
             }
         });
+        $heapshot.find('li').removeClass('current');
+        $(bindto).addClass('current');
+        if(options.autostart===true){
+            clearInterval(_interval);
+            _interval = setInterval(next, options.animationdelay);
+            $heapshot.hover(function(){
+               clearInterval(_interval);
+            });
+            $heapshot.on('mouseleave',function(){
+                _interval = setInterval(next, options.animationdelay);
+            });
+        }
         $(bindto).find('img').click(function(event){            
             if(_animate === true ){
                 event.stopPropagation();
@@ -123,7 +138,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     _animate = false;
                     bindFirst();
                 });
-                console.log('rotation from '+rfrom+' to '+rto);
                 $e.rotate({
                     angle: rfrom, 
                     animateTo : rto,
@@ -131,7 +145,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     duration:1500
                 });
             });
-            console.log('rotation from '+from+' to '+to);
             $e.rotate({
                 angle: from, 
                 animateTo : to,

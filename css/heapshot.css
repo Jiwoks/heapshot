@@ -11,6 +11,10 @@
     list-style-type: none;
 }
 
+.heapshot li.current {
+    cursor: pointer;
+}
+
 .heapshot li img {
     max-width: none;
     border: 8px solid #FFF;
