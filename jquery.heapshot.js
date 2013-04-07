@@ -119,7 +119,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             }
             _animate = true;
             $e = $(this).parent();
-            from = parseInt($e.getRotateAngle());
+            from = $e.data('rotation');
             to = parseInt(from + options.rotation);
             $e.animate({
                 left : $(this).position().left+$(this).width()+20
